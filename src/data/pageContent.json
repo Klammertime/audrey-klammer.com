@@ -1,0 +1,35 @@
+[
+  {
+    "page": "about",
+    "pageHeader": "I'm more than just a developer",
+    "bioHeader": "Hi, I'm Audrey, it's great to meet you.",
+    "bioText": "I'm a freelance web developer based in San Francisco, CA. I have over 10 years of experience in the tech industry. I'm specialized in UI development with a passion for user experience. I have a curios nature and a have a passion for learning new technologies. When I am not working, my hobbies include caring for my many plants, vegan baking, and rewatching old Star Trek episodes.",
+    "quote": "There is a way out of every box, a solution to every puzzle; it's just a matter of finding it.",
+    "author": "Jean-Luc Picard",
+    "skillsHeader": "PROFESSIONAL",
+    "skillsDescription": "My Current Skillset",
+    "reviewsHeader": "CONTACT",
+    "reviewsDescription": "What My Coworkers Say"
+  },
+  {
+    "page": "contact",
+    "pageHeader": "Let's get in touch",
+    "formHeader": "Have a project in mind?",
+    "formDescription": "Drop me a line! Let's make something awesome together."
+  },
+  {
+    "page": "blog",
+    "pageHeader": "What I'm learning and things I've discovered"
+  },
+  {
+    "page": "home",
+    "pageHeader": "My name is Audrey Klammer. I'm a UI Engineer based in San Francisco.",
+    "description": "I develop modern apps using React, CSS3 and ES6+."
+  },
+  { "page": "work", "pageHeader": "The work I do, and businesses I help" },
+  {
+    "page": "portfolio-post",
+    "pageHeader": "The work I do, and businesses I help"
+  },
+  { "page": "blogPost" }
+]
