@@ -1,8 +1,8 @@
 /** @format */
 
 import React from 'react'
-import Layout from '../components/layout'
 import styled from 'styled-components'
+import Layout from '../components/layout'
 
 const StyledSection = styled.section`
   position: relative;

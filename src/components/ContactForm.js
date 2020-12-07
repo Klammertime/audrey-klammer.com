@@ -3,7 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { navigate } from 'gatsby-link'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 
 const FormHeader = styled.h3`
   margin: 0 0 5px 0;

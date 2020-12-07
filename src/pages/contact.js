@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/SEO'
 import styled from 'styled-components'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
 

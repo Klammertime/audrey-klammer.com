@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 
 const StyledSection = styled.section`
   position: relative;
