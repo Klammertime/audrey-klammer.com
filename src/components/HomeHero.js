@@ -1,14 +1,16 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
-import Wave from "../components/Wave"
+/** @format */
+
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import Wave from '../components/Wave'
 
 const StyledDiv = styled.div`
   text-align: center;
   max-height: 920px;
   display: grid;
-  grid: auto-flow 12em 1fr 3fr / 1fr 1.3fr 1.3fr 1fr;
+  grid: auto-flow 12em 1fr 3fr / 1fr 1.5fr 1.5fr 1fr;
 `
 
 const StyledHeader = styled.h1`
@@ -50,11 +52,7 @@ const WaveWrapper = styled.div`
   margin-bottom: -30px;
 `
 const Cover = styled.div`
-  background-image: linear-gradient(
-    180deg,
-    rgba(22, 26, 37, 0.4),
-    rgba(22, 26, 37, 0.4)
-  );
+  background-image: linear-gradient(180deg, rgba(22, 26, 37, 0.4), rgba(22, 26, 37, 0.4));
   align-self: start;
   width: 100%;
   height: 100%;
@@ -96,8 +94,8 @@ const HomeHero = ({ description }) => {
           alt="imageTestTest"
         />
         <StyledHeader>
-          My name is Audrey Klammer.
-          <br /> I'm a UI Engineer based in San Francisco.
+          My name is Audrey Klammer. <br />
+          I'm a UI Engineer based in San Francisco.
         </StyledHeader>
         <Description>{description}</Description>
         <WaveWrapper>
