@@ -12,16 +12,14 @@ const FooterGrid = styled.nav`
   display: grid;
   padding: 3vw;
   place-items: center 
-
   grid-template-rows: auto;
   grid-template-columns: 1fr auto auto;
   grid-auto-columns: 1fr;
   grid-column-gap: 8vw;
   grid-row-gap: 16px;
-
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
-    padding: 5vw;
+    padding: 4vw;
     grid-row-gap: 40px;
     grid-template-rows: auto auto auto;
   }

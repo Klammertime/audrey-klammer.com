@@ -38,6 +38,9 @@ const SiteFooter = styled.footer`
 const FooterBottom = styled.div`
   background-color: rgba(0, 0, 0, 0.08);
   padding: 1.6vw 3vw;
+  @media (max-width: 991px) {
+    padding: 5vw 3vw;
+  }
 `
 
 const Layout = ({ location, children, pageDescription, templateHeader, header }) => {

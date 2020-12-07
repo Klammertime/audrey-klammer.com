@@ -51,9 +51,9 @@ export const query = graphql`
                   maxHeight: 1000
                   quality: 100
                   fit: COVER
-                  cropFocus: NORTHWEST
+                  cropFocus: NORTHEAST
                 ) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
@@ -66,7 +66,7 @@ export const query = graphql`
                   fit: COVER
                   cropFocus: NORTHEAST
                 ) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
@@ -79,7 +79,7 @@ export const query = graphql`
                   fit: COVER
                   cropFocus: NORTHWEST
                 ) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

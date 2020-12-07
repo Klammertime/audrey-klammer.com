@@ -34,6 +34,7 @@ const ProjectImagesWrapper = styled.div`
   padding: 0 10px;
   @media (max-width: 990px) {
     padding: 0 20px;
+    grid-column: 1/13;
   }
 `
 
@@ -47,6 +48,7 @@ const Sidebar = styled.div`
   padding: 0 10px;
   @media (max-width: 990px) {
     padding: 0 20px;
+    grid-column: 1/13;
   }
 `
 
@@ -119,6 +121,15 @@ const StyledLink = styled.a`
     text-decoration: underline;
   }
 `
+
+const StyledBlockquote = styled.blockquote`
+  margin: 24px 0;
+  padding: 8px 30px;
+  border-left: 2px solid #f96a4c;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: left;
+`
 const PortfolioPageOne = ({ location, data }) => {
   let { otherImage, otherImage2, otherImage3 } = data.otherJson.fields
   let {
@@ -130,6 +141,7 @@ const PortfolioPageOne = ({ location, data }) => {
     technology,
     link,
     role,
+    testimonial,
   } = data.otherJson
   const { pageHeader } = data.pageContentJson
   return (
@@ -149,6 +161,11 @@ const PortfolioPageOne = ({ location, data }) => {
             <ProjectImage fluid={otherImage3.childImageSharp.fluid} />
             {description3 && <ImageCaptionHeading>Result</ImageCaptionHeading>}
             {description3 && <ImageCaption>{description3}</ImageCaption>}
+            {testimonial && (
+              <div>
+                <StyledBlockquote>{testimonial.review}</StyledBlockquote>- {testimonial.name}
+              </div>
+            )}
           </ProjectImagesWrapper>
           <Sidebar>
             <AlteredMainGrid>
@@ -166,7 +183,9 @@ const PortfolioPageOne = ({ location, data }) => {
               )}
               <Item>
                 <ItemText>
-                  <StyledLink href={link}>View Website</StyledLink>
+                  <StyledLink target="_blank" href={link}>
+                    View Website
+                  </StyledLink>
                 </ItemText>
               </Item>
             </AlteredMainGrid>
@@ -194,25 +213,29 @@ export const pageQuery = graphql`
       description3
       link
       role
+      testimonial {
+        name
+        review
+      }
       fields {
         otherImage {
           childImageSharp {
             fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         otherImage2 {
           childImageSharp {
             fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         otherImage3 {
           childImageSharp {
             fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

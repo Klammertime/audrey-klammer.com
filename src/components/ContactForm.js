@@ -43,15 +43,26 @@ const StyledForm = styled.form`
   grid-gap: 24px 16px;
   grid: auto-flow auto / repeat(12, 1fr [col-start]);
   padding-top: 50px;
+  @media (max-width: 911px) {
+    grid-gap: 0;
+  }
 `
 const NameLabel = styled(StyledLabel)`
   grid-column: 1/6;
   grid-row: 1/2;
+
+  @media (max-width: 911px) {
+    grid-column: 1/13;
+  }
 `
 
 const EmailLabel = styled(StyledLabel)`
   grid-row: 1/2;
   grid-column: 6/13;
+  @media (max-width: 911px) {
+    grid-row: 2/3;
+    grid-column: 1/13;
+  }
 `
 
 const TextAreaLabel = styled(StyledLabel)`
