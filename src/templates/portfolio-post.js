@@ -1,9 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+/** @format */
+
+import React from 'react'
+import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 const StyledSection = styled.section`
   position: relative;
@@ -23,12 +25,16 @@ const MainGrid = styled.div`
   perspective: 2000px;
   display: grid;
   grid: auto-flow auto / repeat(12, 1fr [col-start]);
-  grid-gap: 0;
+  margin: 0 auto;
 `
 const ProjectImagesWrapper = styled.div`
   display: block;
   grid-column: 1/9;
   margin: 20px 0 14px 0;
+  padding: 0 10px;
+  @media (max-width: 990px) {
+    padding: 0 20px;
+  }
 `
 
 const ProjectImage = styled(Img)`
@@ -38,6 +44,10 @@ const ProjectImage = styled(Img)`
 
 const Sidebar = styled.div`
   grid-column: 10/13;
+  padding: 0 10px;
+  @media (max-width: 990px) {
+    padding: 0 20px;
+  }
 `
 
 const Heading = styled.h2`
@@ -119,15 +129,11 @@ const PortfolioPageOne = ({ location, data }) => {
     title,
     technology,
     link,
+    role,
   } = data.otherJson
-  const { pageHeader, page } = data.pageContentJson
+  const { pageHeader } = data.pageContentJson
   return (
-    <Layout
-      location={location}
-      pageDescription={pageHeader}
-      templateHeader={false}
-      header={page}
-    >
+    <Layout location={location} pageDescription={pageHeader} templateHeader={false} header={'Work'}>
       <SEO title="work" />
       <StyledSection>
         <MainGrid>
@@ -137,13 +143,11 @@ const PortfolioPageOne = ({ location, data }) => {
             <ImageCaption>{description}</ImageCaption>
 
             <ProjectImage fluid={otherImage2.childImageSharp.fluid} />
-            {description2 && <ImageCaptionHeading>Problem</ImageCaptionHeading>}
+            {description2 && <ImageCaptionHeading>Technology</ImageCaptionHeading>}
             {description2 && <ImageCaption>{description2}</ImageCaption>}
 
             <ProjectImage fluid={otherImage3.childImageSharp.fluid} />
-            {description3 && (
-              <ImageCaptionHeading>Solution & Result</ImageCaptionHeading>
-            )}
+            {description3 && <ImageCaptionHeading>Result</ImageCaptionHeading>}
             {description3 && <ImageCaption>{description3}</ImageCaption>}
           </ProjectImagesWrapper>
           <Sidebar>
@@ -154,10 +158,12 @@ const PortfolioPageOne = ({ location, data }) => {
                 <ItemTitle>Technology</ItemTitle>
                 <ItemText> {technology}</ItemText>
               </Item>
-              <Item>
-                <ItemTitle>Role</ItemTitle>
-                <ItemText> {technology}</ItemText>
-              </Item>
+              {role && (
+                <Item>
+                  <ItemTitle>Role</ItemTitle>
+                  <ItemText> {role}</ItemText>
+                </Item>
+              )}
               <Item>
                 <ItemText>
                   <StyledLink href={link}>View Website</StyledLink>
@@ -187,6 +193,7 @@ export const pageQuery = graphql`
       description2
       description3
       link
+      role
       fields {
         otherImage {
           childImageSharp {

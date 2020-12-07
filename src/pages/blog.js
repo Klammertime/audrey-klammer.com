@@ -1,9 +1,11 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+/** @format */
+
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
+import Bio from '../components/Bio'
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 const BlogWrapper = styled.div`
   margin: 0 auto;
@@ -13,7 +15,7 @@ const BlogWrapper = styled.div`
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const { page, pageHeader } = data.pageContentJson
+  const { pageHeader } = data.pageContentJson
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -25,26 +27,17 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout
-      location={location}
-      title={siteTitle}
-      header={page}
-      pageDescription={pageHeader}
-    >
+    <Layout location={location} title={siteTitle} header={'Blog'} pageDescription={pageHeader}>
       <SEO title="All posts" />
       <BlogWrapper>
         <Bio />
         <ol style={{ listStyle: `none` }}>
-          {posts.map(post => {
+          {posts.map((post) => {
             const title = post.frontmatter.title || post.fields.slug
 
             return (
               <li key={post.fields.slug}>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
+                <article className="post-list-item" itemScope itemType="http://schema.org/Article">
                   <header>
                     <h2>
                       <Link to={`/blog${post.fields.slug}`} itemProp="url">
@@ -76,7 +69,6 @@ export default BlogIndex
 export const pageQuery = graphql`
   query {
     pageContentJson(page: { eq: "blog" }) {
-      page
       pageHeader
     }
     site {

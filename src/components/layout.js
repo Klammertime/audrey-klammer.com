@@ -1,20 +1,19 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import HomeHero from "../components/HomeHero"
-import PageHeader from "../components/PageHeader"
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+/** @format */
+
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
+import HomeHero from '../components/HomeHero'
+import PageHeader from '../components/PageHeader'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 const Site = styled.div`
   background: white;
   min-height: 100vh;
   display: grid;
   grid:
-    auto-flow minmax(4em, auto) 1fr minmax(1em, auto) / 2em 1fr minmax(
-      auto,
-      60em
-    )
+    auto-flow minmax(4em, auto) 1fr minmax(1em, auto) / 2em 1fr minmax(auto, 60em)
     1fr 2em;
 `
 
@@ -41,13 +40,7 @@ const FooterBottom = styled.div`
   padding: 1.6vw 3vw;
 `
 
-const Layout = ({
-  location,
-  children,
-  pageDescription,
-  templateHeader,
-  header,
-}) => {
+const Layout = ({ location, children, pageDescription, templateHeader, header }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -62,8 +55,7 @@ const Layout = ({
 
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const description = data.site.siteMetadata.description
-  const heading = data.site.siteMetadata.heading
+  const { description, heading } = data.site.siteMetadata
 
   return (
     <Site data-is-root-path={isRootPath}>

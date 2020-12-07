@@ -1,11 +1,28 @@
-import React from "react"
-import Layout from "../components/layout"
+/** @format */
+
+import React from 'react'
+import Layout from '../components/layout'
+import styled from 'styled-components'
+
+const StyledSection = styled.section`
+  position: relative;
+  z-index: 3;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 32px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+`
 
 const ThanksPage = ({ location }) => {
   return (
-    <Layout header={"Thank you"} location={location}>
-      <h1>Thank you!</h1>
-      <p>This is a custom thank you page for form submissions</p>
+    <Layout header={'Contact'} location={location}>
+      <StyledSection>
+        <h1>Thank you!</h1>
+        <p>Your form was successfully submitted.</p>
+      </StyledSection>
     </Layout>
   )
 }

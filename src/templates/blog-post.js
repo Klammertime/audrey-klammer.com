@@ -1,9 +1,11 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+/** @format */
+
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
+import Bio from '../components/Bio'
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 const BlogWrapper = styled.div`
   position: relative;
@@ -64,19 +66,12 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <BlogWrapper>
-        <article
-          className="blog-post"
-          itemScope
-          itemType="http://schema.org/Article"
-        >
+        <article className="blog-post" itemScope itemType="http://schema.org/Article">
           <PostHeader>
             <Date>{post.frontmatter.date}</Date>
             <BlogTitle itemProp="headline">{post.frontmatter.title}</BlogTitle>
           </PostHeader>
-          <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
           <hr />
           <footer>
             <Bio />
@@ -108,11 +103,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title

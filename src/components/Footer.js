@@ -1,6 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+/** @format */
+
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const FooterGrid = styled.nav`
   max-width: 100vw;
@@ -75,6 +78,22 @@ const StyledText = styled.div`
   margin-bottom: 12px;
 `
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          social {
+            twitter
+            github
+            linkedin
+          }
+        }
+      }
+    }
+  `)
+
+  const { twitter, github, linkedin } = data.site.siteMetadata.social
+
   return (
     <FooterGrid>
       <FooterNav>
@@ -87,39 +106,20 @@ const Footer = () => {
 
       <div>
         <StyledHeader> Let's work together</StyledHeader>
-        <StyledText>
-          Have a project in mind? Don’t hesitate to contact me and get free
-          consultation
-        </StyledText>
-        <StyledFooterLinks
-          href="https://example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <StyledText>Have a project in mind? Don’t hesitate to contact me.</StyledText>
+        {/* <StyledFooterLinks href="https://example.com" target="_blank" rel="noopener noreferrer">
           contact@audreyklammer.com
-        </StyledFooterLinks>
+        </StyledFooterLinks> */}
       </div>
 
       <FooterLinks>
-        <StyledFooterLinks
-          href="https://example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <StyledFooterLinks href={twitter} target="_blank" rel="noopener noreferrer">
           Twitter
         </StyledFooterLinks>
-        <StyledFooterLinks
-          href="https://example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <StyledFooterLinks href={github} target="_blank" rel="noopener noreferrer">
           GitHub
         </StyledFooterLinks>
-        <StyledFooterLinks
-          href="https://example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <StyledFooterLinks href={linkedin} target="_blank" rel="noopener noreferrer">
           LinkedIn
         </StyledFooterLinks>
       </FooterLinks>

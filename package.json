@@ -1,9 +1,9 @@
 {
-  "name": "audrey-klammer.com",
+  "name": "audreyklammer.com",
   "private": true,
   "description": "Portfolio site and blog for Audrey Klammer",
   "version": "0.1.0",
-  "author": "Audrey Klammer <audrey.ck@gmail.com>",
+  "author": "Audrey Klammer",
   "bugs": {
     "url": "https://github.com/klammertime/audrey-klammer.com/issues"
   },
@@ -42,7 +42,7 @@
   "devDependencies": {
     "prettier": "2.1.2"
   },
-  "homepage": "",
+  "homepage": "audreyklammer.com",
   "keywords": [
     "Audrey Klammer"
   ],

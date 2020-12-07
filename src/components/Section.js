@@ -1,5 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+/** @format */
+
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledSection = styled.section`
   position: relative;
@@ -14,10 +16,10 @@ const StyledSection = styled.section`
 `
 
 const Grid = styled.div`
-  grid: ${props =>
+  grid: ${(props) =>
     props.columns
-      ? "auto auto / repeat(3, 1fr [col-start])"
-      : "auto auto / repeat(12, 1fr [col-start])"};
+      ? 'auto auto / repeat(3, 1fr [col-start])'
+      : 'auto auto / repeat(12, 1fr [col-start])'};
   width: 100%;
   perspective: 2000px;
   display: grid;

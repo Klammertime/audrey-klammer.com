@@ -1,7 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { navigate } from "gatsby-link"
-import SEO from "../components/seo"
+/** @format */
+
+import React from 'react'
+import styled from 'styled-components'
+import { navigate } from 'gatsby-link'
+import SEO from '../components/SEO'
 
 const FormHeader = styled.h3`
   margin: 0 0 5px 0;
@@ -85,30 +87,30 @@ const SubmitButton = styled.button`
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
 const ContactForm = ({ formDescription, formHeader }) => {
   const [state, setState] = React.useState({})
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        'form-name': form.getAttribute('name'),
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error))
   }
   return (
     <>
@@ -143,12 +145,7 @@ const ContactForm = ({ formDescription, formHeader }) => {
         <NameLabel>
           Name
           <br />
-          <StyledInput
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            onChange={handleChange}
-          />
+          <StyledInput type="text" name="name" placeholder="Your Name" onChange={handleChange} />
         </NameLabel>
         <TextAreaLabel>
           Message

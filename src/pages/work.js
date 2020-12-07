@@ -1,15 +1,17 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Project from "../components/Project"
-import Section from "../components/Section"
+/** @format */
+
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
+import Project from '../components/Project'
+import Section from '../components/Section'
 
 const WorkPage = ({ location, data }) => {
-  const { page, pageHeader } = data.pageContentJson
+  const { pageHeader } = data.pageContentJson
 
   return (
-    <Layout header={page} location={location} pageDescription={pageHeader}>
+    <Layout header={'Work'} location={location} pageDescription={pageHeader}>
       <SEO title="work" />
       <Section columns={true}>
         {data.allOtherJson.edges.map((val, index) => (
@@ -32,7 +34,6 @@ export const query = graphql`
   {
     pageContentJson(page: { eq: "work" }) {
       pageHeader
-      page
     }
     allOtherJson {
       edges {
@@ -63,7 +64,7 @@ export const query = graphql`
                   maxHeight: 1000
                   quality: 100
                   fit: COVER
-                  cropFocus: NORTHWEST
+                  cropFocus: NORTHEAST
                 ) {
                   ...GatsbyImageSharpFluid
                 }

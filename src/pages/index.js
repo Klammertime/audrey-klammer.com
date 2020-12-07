@@ -1,21 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Skills from "../components/Skills"
-import Project from "../components/Project"
-import Section from "../components/Section"
+/** @format */
+
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/SEO'
+import Layout from '../components/layout'
+import Skills from '../components/Skills'
+import Project from '../components/Project'
+import Section from '../components/Section'
 
 const HomePage = ({ data, location, heading, description }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout
-      location={location}
-      title={siteTitle}
-      description={description}
-      heading={heading}
-    >
+    <Layout location={location} title={siteTitle} description={description} heading={heading}>
       <SEO title="All posts" />
       <Section columns={true}>
         {data.allOtherJson.edges.map((val, index) => (

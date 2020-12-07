@@ -1,12 +1,14 @@
-import React from "react"
-import styled from "styled-components"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Skills from "../components/Skills"
-import Reviews from "../components/Reviews"
-import Section from "../components/Section"
+/** @format */
+
+import React from 'react'
+import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/SEO'
+import Skills from '../components/Skills'
+import Reviews from '../components/Reviews'
+import Section from '../components/Section'
 
 const AboutImgWrapper = styled.div`
   grid-row: 1/2;
@@ -39,24 +41,14 @@ const StyledBlockquote = styled.blockquote`
   text-align: left;
 `
 const AboutPage = ({ location, data }) => {
-  const {
-    page,
-    pageHeader,
-    bioText,
-    bioHeader,
-    author,
-    quote,
-  } = data.pageContentJson
+  const { pageHeader, bioText, bioHeader, author, quote } = data.pageContentJson
 
   return (
-    <Layout header={page} location={location} pageDescription={pageHeader}>
+    <Layout header={'About'} location={location} pageDescription={pageHeader}>
       <SEO title="about" />
       <Section>
         <AboutImgWrapper>
-          <Img
-            fluid={data.file.childImageSharp.fluid}
-            alt="Audrey Klammer about me pic"
-          />
+          <Img fluid={data.file.childImageSharp.fluid} alt="Audrey Klammer about me pic" />
         </AboutImgWrapper>
         <AboutTextWrapper>
           <h2>{bioHeader}</h2>
@@ -75,7 +67,6 @@ export default AboutPage
 export const query = graphql`
   {
     pageContentJson(page: { eq: "about" }) {
-      page
       pageHeader
       bioText
       bioHeader

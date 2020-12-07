@@ -1,3 +1,5 @@
+/** @format */
+
 module.exports = {
   siteMetadata: {
     title: `Audrey Klammer`,
@@ -9,9 +11,9 @@ module.exports = {
     description: `I develop modern apps using React, CSS3 and ES6+.`,
     siteUrl: `https://audreyklammer/`,
     social: {
-      twitter: `klammertime`,
-      github: ``,
-      linkedin: ``,
+      twitter: `https://twitter.com/Klammertime`,
+      github: `https://github.com/Klammertime`,
+      linkedin: `https://www.linkedin.com/in/audreyklammer/`,
     },
   },
 
@@ -67,13 +69,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images/projects`,
-        name: `projects`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
       },
@@ -84,7 +79,7 @@ module.exports = {
         plugins: [
           //from netlify starter
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: 'gatsby-remark-relative-images',
           },
           {
             resolve: `gatsby-remark-images`,
@@ -94,9 +89,9 @@ module.exports = {
           },
           //from netlify starter
           {
-            resolve: "gatsby-remark-copy-linked-files",
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: "static",
+              destinationDir: 'static',
             },
           },
           {
