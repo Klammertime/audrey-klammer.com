@@ -39,6 +39,7 @@ export const query = graphql`
       edges {
         node {
           id
+          blurb
           description2
           title
           path
@@ -49,7 +50,7 @@ export const query = graphql`
                 fluid(
                   maxWidth: 1000
                   maxHeight: 1000
-                  quality: 100
+                  quality: 70
                   fit: COVER
                   cropFocus: NORTHEAST
                 ) {
@@ -59,13 +60,7 @@ export const query = graphql`
             }
             otherImage2 {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000
-                  maxHeight: 1000
-                  quality: 100
-                  fit: COVER
-                  cropFocus: NORTHEAST
-                ) {
+                fluid(maxWidth: 1000, maxHeight: 1000, quality: 70, fit: COVER, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
@@ -75,7 +70,7 @@ export const query = graphql`
                 fluid(
                   maxWidth: 1000
                   maxHeight: 1000
-                  quality: 100
+                  quality: 70
                   fit: COVER
                   cropFocus: NORTHWEST
                 ) {

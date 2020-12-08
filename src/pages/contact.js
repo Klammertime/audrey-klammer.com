@@ -9,7 +9,7 @@ import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
 
 const ContactWrapper = styled.div`
-  grid-column: 1/13;
+  grid-column: 2/12;
 `
 const ContactPage = ({ location, data }) => {
   const { pageHeader, formDescription, formHeader } = data.pageContentJson

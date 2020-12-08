@@ -1,3 +1,5 @@
+/** @format */
+
 const path = require(`path`)
 // gatsby-source-filesystem exports three helper functions:
 // 1) createFilePath
@@ -6,7 +8,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // exports.createPages = async ({ graphql, actions, reporter }) => {
-exports.createPages = async gatsbyNodeHelpers => {
+exports.createPages = async (gatsbyNodeHelpers) => {
   const { graphql, actions, reporter } = gatsbyNodeHelpers
   //reporter - GatsbyReporter - Set of utilities to output information to user
   //actions - Collection of functions used to programmatically modify Gatsby’s internal state.
@@ -15,10 +17,7 @@ exports.createPages = async gatsbyNodeHelpers => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
           nodes {
             id
             fields {
@@ -45,10 +44,7 @@ exports.createPages = async gatsbyNodeHelpers => {
   )
 
   if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    )
+    reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors)
     return
   }
 
@@ -60,9 +56,7 @@ exports.createPages = async gatsbyNodeHelpers => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
       createPage({
         path: `${post.frontmatter.path}${String(post.fields.slug)}`,
-        component: path.resolve(
-          `src/templates/${String(post.frontmatter.templateKey)}.js`
-        ),
+        component: path.resolve(`src/templates/${String(post.frontmatter.templateKey)}.js`),
         context: {
           id: post.id,
           previousPostId,
@@ -87,7 +81,7 @@ exports.createPages = async gatsbyNodeHelpers => {
   }
 }
 
-exports.onCreateNode = gatsbyNodeHelpers => {
+exports.onCreateNode = (gatsbyNodeHelpers) => {
   const { node, actions, getNode } = gatsbyNodeHelpers
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
@@ -99,7 +93,7 @@ exports.onCreateNode = gatsbyNodeHelpers => {
     })
   }
 
-  if (node.internal.type === "OtherJson") {
+  if (node.internal.type === 'OtherJson') {
     // extends the existing gatsby node with a new field, later accessible via the fields graphql node.
     createNodeField({
       node, // the current node
@@ -121,7 +115,7 @@ exports.onCreateNode = gatsbyNodeHelpers => {
   }
 }
 
-exports.createSchemaCustomization = gatsbyNodeHelpers => {
+exports.createSchemaCustomization = (gatsbyNodeHelpers) => {
   const { actions } = gatsbyNodeHelpers
   const { createTypes } = actions
   createTypes(`
@@ -132,11 +126,6 @@ exports.createSchemaCustomization = gatsbyNodeHelpers => {
     }
 
     type Author {
-      name: String
-      summary: String
-    }
-
-    type Test {
       name: String
       summary: String
     }

@@ -44,8 +44,8 @@
   },
   {
     "item": 3,
-    "content": "A recreation the classic arcade game Frogger",
-    "blurb": "A recreation the classic arcade game Frogger",
+    "content": "A recreation of the classic arcade game Frogger",
+    "blurb": "A recreation of the classic arcade game Frogger",
     "title": "Classic Arcade Game",
     "path": "/work/",
     "templateKey": "portfolio-post",

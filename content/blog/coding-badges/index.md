@@ -1,24 +1,18 @@
 ---
-templateKey: "blog-post"
+templateKey: 'blog-post'
 path: /blog
 title: jQuery Plugin - Display Your Coding Badges
-date: "2015-05-28T22:40:32.169Z"
+date: '2015-05-28T22:40:32.169Z'
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
+
+<!-- @format -->
 
 # Insignia
 
 **jQuery Plugin: Display Your Coding Badges**
 
 Have several coding tutorial badges you've earned from [Code School](https://www.codeschool.com/) and [Treehouse](https://teamtreehouse.com/home) that you'd like to display on your site? This simple jQuery plugin makes that possible, whether your site is hand-coded, or created using a popular CMS such as WordPress or Drupal.
-
-## Demo
-
-Navigate to the project hosted on github.com [**here**](http://klammertime.github.io/Insignia/)
-
-**OR**
-
-Navigate to Insignia on my personal [**about**](http://audreyklammer.com/about.html) page.
 
 ## Usage
 
