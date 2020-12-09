@@ -19,7 +19,7 @@ const WorkPage = ({ location, data }) => {
             key={index}
             path={val.node.path}
             forSlug={val.node.forSlug}
-            title={val.node.title}
+            heading={val.node.title}
             description={val.node.blurb}
             image={val.node.fields.otherImage}
           />
@@ -61,8 +61,8 @@ export const query = graphql`
             otherImage2 {
               childImageSharp {
                 fluid(
-                  maxWidth: 1000
-                  maxHeight: 1000
+                  maxWidth: 500
+                  maxHeight: 500
                   quality: 70
                   fit: COVER
                   cropFocus: NORTHEAST
@@ -74,8 +74,8 @@ export const query = graphql`
             otherImage3 {
               childImageSharp {
                 fluid(
-                  maxWidth: 1000
-                  maxHeight: 1000
+                  maxWidth: 500
+                  maxHeight: 500
                   quality: 70
                   fit: COVER
                   cropFocus: NORTHWEST

@@ -24,7 +24,7 @@ const Grid = styled.div`
   perspective: 2000px;
   display: grid;
   grid-gap: 14px 30px;
-  @media (max-width: 940px) {
+  @media (max-width: 640px) {
     grid-gap: 0;
     grid: auto auto / 1fr;
   }
