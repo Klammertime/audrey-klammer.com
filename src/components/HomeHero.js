@@ -74,7 +74,7 @@ const HomeHero = ({ description }) => {
     query {
       file(relativePath: { eq: "home-hero.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 3200, maxHeight: 1800, quality: 100) {
+          fluid(maxWidth: 1600, maxHeight: 900, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -91,7 +91,7 @@ const HomeHero = ({ description }) => {
             ...data.file.childImageSharp.fluid,
             aspectRatio: 16 / 9,
           }}
-          alt="imageTestTest"
+          alt="home-hero"
         />
         <StyledHeader>
           My name is Audrey Klammer. <br />
