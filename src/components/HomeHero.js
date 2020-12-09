@@ -72,7 +72,7 @@ const StyledImage = styled(Img)`
 const HomeHero = ({ description }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "home-hero.jpg" }) {
+      file(relativePath: { eq: "home-hero.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1600, maxHeight: 900, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
