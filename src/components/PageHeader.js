@@ -39,7 +39,7 @@ const Header = styled.h2`
   margin-bottom: 0px;
   font: normal 700 3.7vw/4.4vw Inter, sans-serif;
   @media (max-width: 940px) {
-    font: normal 700 10vw/4.4vw Inter, sans-serif;
+    font: normal 700 7vw/4.4vw Inter, sans-serif;
   }
 `
 

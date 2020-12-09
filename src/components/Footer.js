@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
+import { SocialIcon } from 'react-social-icons'
 
 const FooterGrid = styled.nav`
   max-width: 100vw;
@@ -54,7 +55,7 @@ const FooterLinks = styled.div`
   }
 `
 
-const StyledFooterLinks = styled.a`
+const StyledFooterLinks = styled.div`
   color: #fff;
   font: normal 600 13px/10px Inter, sans-serif;
   margin: 6px 0;
@@ -75,6 +76,7 @@ const StyledText = styled.div`
   padding: 0;
   margin-bottom: 12px;
 `
+
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -105,19 +107,37 @@ const Footer = () => {
       <div>
         <StyledHeader> Let's work together</StyledHeader>
         <StyledText>Have a project in mind? Don’t hesitate to contact me.</StyledText>
-        {/* <StyledFooterLinks href="https://example.com" target="_blank" rel="noopener noreferrer">
-          contact@audreyklammer.com
-        </StyledFooterLinks> */}
       </div>
 
       <FooterLinks>
-        <StyledFooterLinks href={twitter} target="_blank" rel="noopener noreferrer">
+        <StyledFooterLinks>
+          <SocialIcon
+            bgColor="white"
+            style={{ height: 20, width: 20, marginRight: '6px' }}
+            url={twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+          />
           Twitter
         </StyledFooterLinks>
-        <StyledFooterLinks href={github} target="_blank" rel="noopener noreferrer">
+        <StyledFooterLinks>
+          <SocialIcon
+            bgColor="white"
+            style={{ height: 20, width: 20, marginRight: '6px' }}
+            target="_blank"
+            url={github}
+            rel="noopener noreferrer"
+          />
           GitHub
         </StyledFooterLinks>
-        <StyledFooterLinks href={linkedin} target="_blank" rel="noopener noreferrer">
+        <StyledFooterLinks>
+          <SocialIcon
+            bgColor="white"
+            style={{ height: 20, width: 20, marginRight: '6px' }}
+            url={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          />
           LinkedIn
         </StyledFooterLinks>
       </FooterLinks>

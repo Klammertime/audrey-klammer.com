@@ -12486,6 +12486,13 @@
   dependencies:
     "shallowequal" "^1.0.1"
 
+"react-social-icons@^4.1.0":
+  "integrity" "sha512-wbwSbyS4QWjpL6U+GFZDBrE5Ao8px0QkRgo0XkxDHF2LNRsFNErSDnIPKiowhQ7t7IyrSA2HYrEw7ETgpVTg+Q=="
+  "resolved" "https://registry.npmjs.org/react-social-icons/-/react-social-icons-4.1.0.tgz"
+  "version" "4.1.0"
+  dependencies:
+    "prop-types" "^15.6.2"
+
 "react-style-singleton@^2.1.0":
   "integrity" "sha512-DH4ED+YABC1dhvSDYGGreAHmfuTXj6+ezT3CmHoqIEfxNgEYfIMoOtmbRp42JsUst3IPqBTDL+8r4TF7EWhIHw=="
   "resolved" "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.1.0.tgz"
@@ -12495,7 +12502,7 @@
     "invariant" "^2.2.4"
     "tslib" "^1.0.0"
 
-"react@^16.12.0", "react@^16.8.0":
+"react@^16.12.0", "react@^16.8.0", "react@15.x.x || 16.x.x":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"
