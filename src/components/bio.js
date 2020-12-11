@@ -3,6 +3,22 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
+import styled from 'styled-components'
+
+const BioText = styled.p`
+  margin-bottom: var(--spacing-0);
+`
+const BioContainer = styled.div`
+  display: flex;
+  margin-bottom: var(--spacing-16);
+`
+
+const BioAvatar = styled(Image)`
+  margin-right: var(--spacing-4);
+  margin-bottom: var(--spacing-0);
+  min-width: 50px;
+  border-radius: 100%;
+`
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -34,24 +50,23 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className="bio">
+    <BioContainer>
       {avatar && (
-        <Image
+        <BioAvatar
           fixed={avatar}
           alt={name}
-          className="bio-avatar"
           imgStyle={{
             borderRadius: `50%`,
           }}
         />
       )}
       {author?.name && (
-        <p>
+        <BioText>
           Written by <strong>{name}</strong> {summary}
           <a href={twitter}>You should follow me on Twitter</a>
-        </p>
+        </BioText>
       )}
-    </div>
+    </BioContainer>
   )
 }
 

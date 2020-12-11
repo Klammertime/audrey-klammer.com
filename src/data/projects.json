@@ -1,0 +1,61 @@
+[
+  {
+    "item": 1,
+    "title": "Verizon Media",
+    "content": "Audience Insights data analytics application",
+    "blurb": "Audience Insights data analytics application",
+    "path": "/work/",
+    "templateKey": "portfolio-post",
+    "forSlug": "verizon-media",
+    "description": "Big data and artificial intelligence application aimed at helping carriers monetize troves of data through the use of advanced machine learning techniques and deep analytics. Online segmentation tool (formerly called Palomar) for marketers and advertisers with predictions and recommendation engines. External-facing data visualization product that generates actionable insights after applying large scale machine learning and AI to network and third-party data. Applications include advertising, marketing and consumer lifestyle segmentation.",
+    "description2": "Developed complex data visualizations and reusable components with the help of React, Mapbox, Leaflet.js, GeoJSON and D3.js. Integrated REST API JSON responses to display large amounts of data on client-side. Identified and communicated front-end best practices: lobbied for adoption of JavaScript design guide, automated testing and linting, React, ES6+, performance testing, productivity tools and workflows. Agile environment consisting of 3 week sprints. ",
+    "description3": "Led front end internationalization and localization effort to offer this new mobile marketing intelligence tool to carriers outside of US, team to win $47mln America Movil business. Reduced front-end team development time by over 10 hours/week per person by decoupling UI and back end development.",
+    "image": "portfolio/portfolio-item-1-1.png",
+    "image2": "portfolio/portfolio-item-1-2.png",
+    "image3": "portfolio/portfolio-item-1-3.png",
+    "technology": "React, D3.js, JavaScript",
+    "link": "https://developer.verizonmedia.com/audience-insights/docs/started/ui.html",
+    "role": "Front-end Engineer",
+    "testimonial": {
+      "name": "Dinesh Masand, Manager of Verizon Front End Division",
+      "review": "Audrey was quickly pulled into the Palomar project activities and was expected to contribute to the project very quickly. She picked up the platform in a few days and started contributing almost immediately. She even worked hard during weeknights and weekends to complete some urgent tasks without being told to do so. She was performing while learning and I forgot that she had only been here for less than 2 months."
+    }
+  },
+  {
+    "item": 2,
+    "content": "Application that helps you find movie scene locations all over San Francisco.",
+    "blurb": "App using Google maps and multiple APIs",
+    "title": "Film Locations in SF",
+    "path": "/work/",
+    "templateKey": "portfolio-post",
+    "forSlug": "sf-film-app",
+    "description": "I developed a single-page application featuring a map of SF film locations",
+    "description3": "",
+    "description2": "I developed a single-page application featuring a map of SF film locations which includes: map markers to identify movie scene locations, an autocomplete search function to easily discover over 700 films, and a search function to filter by street. I researched and implemented several third-party APIs to provide additional information about each location (StreetView images using Google Maps Image API) and film (movie reviews using NY Times API, movie poster and more using TMDb API). This user interface uses JavaScript, HTML and Knockoutjs. Knockoutjs uses observers to make your UI automatically stay in sync with an underlying data model, along with a powerful and extensible set of declarative bindings to enable productive development.",
+    "image": "portfolio/portfolio-item-2-1.png",
+    "image2": "portfolio/portfolio-item-2-2.png",
+    "image3": "portfolio/portfolio-item-2-3.png",
+    "technology": "Knockoutjs, AJAX, Bootstrap, jQuery, HTML5, Google Maps, Typekit",
+    "link": "http://klammertime.github.io/P5-Neighborhood-Map/",
+    "projectText": {
+      "text1": "",
+      "role": "Designer/Developer"
+    }
+  },
+  {
+    "item": 3,
+    "content": "A recreation of the classic arcade game Frogger",
+    "blurb": "A recreation of the classic arcade game Frogger",
+    "title": "Classic Arcade Game",
+    "path": "/work/",
+    "templateKey": "portfolio-post",
+    "forSlug": "games",
+    "description": " I created all of the game logic and the code within app.js to add a number of entities to the game, including player characters, enemies, and gem prizes.",
+    "image": "portfolio/portfolio-item-3-3.png",
+    "image2": "portfolio/portfolio-item-3-1.png",
+    "image3": "portfolio/portfolio-item-3-6.png",
+    "role": "Developer",
+    "technology": "Object-Oriented JavaScript, HTML5 Canvas, HTML5 Drag & Drop",
+    "link": "http://klammertime.github.io/P3-Classic-Arcade-Game-Clone/"
+  }
+]

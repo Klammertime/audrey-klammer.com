@@ -9,7 +9,7 @@ import SEO from '../components/seo'
 import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
 import Section from '../components/Section'
-import downloadFile from '../data/downloads/Resume_Audrey_Klammer.pdf'
+import Career from '../components/Career'
 
 const AboutImgWrapper = styled.div`
   grid-row: 1/2;
@@ -54,13 +54,13 @@ const AboutPage = ({ location, data }) => {
         <AboutTextWrapper>
           <h2>{bioHeader}</h2>
           <p>{bioText}</p>
-          <a href={downloadFile} download>
-            Download my resume
-          </a>
           <StyledBlockquote>{quote}</StyledBlockquote>- {author}
         </AboutTextWrapper>
       </Section>
       <Skills />
+
+      <Career />
+
       <Reviews />
     </Layout>
   )

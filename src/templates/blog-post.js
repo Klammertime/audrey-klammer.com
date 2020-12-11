@@ -11,10 +11,10 @@ const BlogWrapper = styled.div`
   position: relative;
   z-index: 3;
   max-width: 870px;
-  margin: -80px auto 0 auto;
+  margin: 0 auto;
   padding: 0 72px;
-  background-color: #fff;
 `
+
 const Date = styled.div`
   position: relative;
   z-index: 1;
@@ -60,13 +60,19 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle} templateHeader={true}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      header={post.frontmatter.title}
+      pageDescription={post.frontmatter.title}
+      templateHeader={true}
+    >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <BlogWrapper>
-        <article className="blog-post" itemScope itemType="http://schema.org/Article">
+        <article itemScope itemType="http://schema.org/Article">
           <PostHeader>
             <Date>{post.frontmatter.date}</Date>
             <BlogTitle itemProp="headline">{post.frontmatter.title}</BlogTitle>

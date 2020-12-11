@@ -1,0 +1,47 @@
+[
+  {
+    "company": "Verizon Media",
+    "city": "Denver, CO ",
+    "date": "2016 - 2019",
+    "jobTitle": "Front End Engineer",
+    "bullets": [
+      "Developed geofencing application for NFL and MLB using React, Redux, Webpack, and styled-components",
+      "Collaborated with UX designer to convert static mockup to working application.",
+      "Spearheaded front-end customizations to rapidly deliver a multimillion dollar data analytics platform to four América Móvil markets in South America.",
+      "Identified and communicated front-end best practices: automated testing and linting, React, ES6+, performance testing, productivity tools and workflows.",
+      "Reduced front-end team development time by over 10 hours/week per person by decoupling UI and back-end development.",
+      "Completed a complex form tokenization feature that included both autocomplete and cut and paste capabilities.",
+      "Collaborated with UX designers, product managers and QA to translate business requirements into completed features."
+    ]
+  },
+  {
+    "company": "Audrey Klammer Design",
+    "city": "Alameda, CA",
+    "date": "2015",
+    "jobTitle": "Freelance Web Developer",
+    "bullets": [
+      "Designed and developed responsive web pages based on clients’ goals.",
+      "Taught web development to underrepresented and underserved youth during an after school program called Game/Code/Design."
+    ]
+  },
+  {
+    "company": " AlchemyAPI (Acquired by IBM Watson Group) ",
+    "city": "Denver, CO ",
+    "date": "2012 - 2014",
+    "jobTitle": "UX Designer, Marketing Director",
+    "bullets": [
+      "Led UX design for AlchemyAPI dynamic dashboard: created wireframe in Adobe Photoshop and Balsamiq; prototype using HTML, CSS and Bootstrap.",
+      "Redesigned AlchemyAPI.com in 4 weeks to meet Series A PR deadline using Drupal. Resulted in $60,000 cost savings and a fully responsive site."
+    ]
+  },
+  {
+    "company": "Boulder Digital Arts",
+    "city": "Boulder, CO",
+    "date": "2010—2011",
+    "jobTitle": "Marketing Coordinator",
+    "bullets": [
+      "Developed marketing campaigns focused on increasing community engagement and profit for digital arts school and co-working space.",
+      "Increased course profit 30% with zero marketing budget by taking advantage of new media trends, public relations, and event marketing."
+    ]
+  }
+]

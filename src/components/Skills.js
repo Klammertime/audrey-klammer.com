@@ -1,8 +1,10 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
-import Section from "../components/Section"
+/** @format */
+
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import Section from '../components/Section'
 
 const SkillText = styled.div`
   margin-top: 8px;
@@ -38,7 +40,7 @@ const SkillImg = styled(Img)`
 `
 
 const Skills = () => {
-  const filename = url => url.substring(url.lastIndexOf("/") + 1).split(".")[0]
+  const filename = (url) => url.substring(url.lastIndexOf('/') + 1).split('.')[0]
 
   const data = useStaticQuery(graphql`
     query {
@@ -75,9 +77,7 @@ const Skills = () => {
         {data.allFile.edges.map((image, index) => (
           <SkillCircle key={index}>
             <SkillImg fixed={image.node.childImageSharp.fixed} />
-            <SkillText>
-              {filename(image.node.childImageSharp.fixed.src)}
-            </SkillText>
+            <SkillText>{filename(image.node.childImageSharp.fixed.src)}</SkillText>
           </SkillCircle>
         ))}
       </SkillsRow>
