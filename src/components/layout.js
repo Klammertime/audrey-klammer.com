@@ -80,7 +80,7 @@ const Layout = ({ location, children, pageDescription, templateHeader, header })
       <SiteFooter role="contentinfo">
         <Footer />
         <FooterBottom>
-          © {data.site.siteMetadata.title} - {new Date().getFullYear()}
+          Handcrafted by me © {data.site.siteMetadata.title} - {new Date().getFullYear()}
         </FooterBottom>
       </SiteFooter>
     </Site>

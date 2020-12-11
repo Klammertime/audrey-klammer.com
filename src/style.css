@@ -244,9 +244,6 @@ table thead tr th {
 a {
   color: var(--color-primary);
   font-weight: 600;
-}
-a:hover,
-a:focus {
   text-decoration: none;
 }
 
