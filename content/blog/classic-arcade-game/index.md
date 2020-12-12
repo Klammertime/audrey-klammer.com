@@ -1,20 +1,18 @@
 ---
-templateKey: "blog-post"
+templateKey: 'blog-post'
 path: /blog
 title: Classic Arcade Game
-date: "2020-11-29T23:46:37.121Z"
+date: '2020-11-29T23:46:37.121Z'
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
+
+<!-- @format -->
 
 **Project 3: Classic Arcade Game Clone (72 hrs)** ~ [Udacity Front-End Web Developer Nanodegree Program (https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
 
 In order to recreate the classic arcade game Frogger, we were provided with visual assets, an image loading utility (resources.js) and a game loop engine (engine.js). I created all of the game logic and the code within app.js to add a number of entities to the game, including player characters, enemies, and gem prizes.
 
 ### [**PLAY GAME HERE**](http://klammertime.github.io/P3-Classic-Arcade-Game-Clone/)
-
-![Princess](https://github.com/Klammertime/P3-Classic-Arcade-Game-Clone/blob/multiplayer/images/char-princess-girl.png "Princess")
-![Enemy](https://github.com/Klammertime/P3-Classic-Arcade-Game-Clone/blob/multiplayer/images/enemy-bug.png "Enemy")
-![Gem](https://github.com/Klammertime/P3-Classic-Arcade-Game-Clone/blob/multiplayer/images/Gem-Orange.png "Gem")
 
 ## Usage
 

@@ -32,9 +32,9 @@
     "description": "I developed a single-page application featuring a map of SF film locations",
     "description3": "",
     "description2": "I developed a single-page application featuring a map of SF film locations which includes: map markers to identify movie scene locations, an autocomplete search function to easily discover over 700 films, and a search function to filter by street. I researched and implemented several third-party APIs to provide additional information about each location (StreetView images using Google Maps Image API) and film (movie reviews using NY Times API, movie poster and more using TMDb API). This user interface uses JavaScript, HTML and Knockoutjs. Knockoutjs uses observers to make your UI automatically stay in sync with an underlying data model, along with a powerful and extensible set of declarative bindings to enable productive development.",
-    "image": "portfolio/portfolio-item-2-1.png",
+    "image": "portfolio/portfolio-item-2-1.jpeg",
     "image2": "portfolio/portfolio-item-2-2.png",
-    "image3": "portfolio/portfolio-item-2-3.png",
+    "image3": "portfolio/portfolio-item-2-3.jpeg",
     "technology": "Knockoutjs, AJAX, Bootstrap, jQuery, HTML5, Google Maps, Typekit",
     "link": "http://klammertime.github.io/P5-Neighborhood-Map/",
     "projectText": {
