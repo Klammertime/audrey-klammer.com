@@ -47,8 +47,8 @@ export const query = graphql`
             otherImage {
               childImageSharp {
                 fluid(
-                  maxWidth: 1000
-                  maxHeight: 1000
+                  maxWidth: 500
+                  maxHeight: 500
                   quality: 70
                   fit: COVER
                   cropFocus: NORTHWEST
@@ -59,7 +59,13 @@ export const query = graphql`
             }
             otherImage2 {
               childImageSharp {
-                fluid(maxWidth: 500, maxHeight: 500, quality: 70, fit: COVER, cropFocus: EAST) {
+                fluid(
+                  maxWidth: 500
+                  maxHeight: 500
+                  quality: 70
+                  fit: COVER
+                  cropFocus: NORTHEAST
+                ) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }

@@ -48,8 +48,8 @@ export const query = graphql`
             otherImage {
               childImageSharp {
                 fluid(
-                  maxWidth: 1000
-                  maxHeight: 1000
+                  maxWidth: 500
+                  maxHeight: 500
                   quality: 70
                   fit: COVER
                   cropFocus: NORTHEAST

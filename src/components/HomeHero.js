@@ -74,7 +74,7 @@ const HomeHero = ({ description }) => {
     query {
       file(relativePath: { eq: "home-hero.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, maxHeight: 900, quality: 100) {
+          fluid(maxWidth: 1600, maxHeight: 900, quality: 70) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }

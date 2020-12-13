@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+/** @format */
+
+import React, { useState, useEffect } from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const NavContainer = styled.nav`
   font-size: 16px;
@@ -22,6 +24,7 @@ const NotScrolled = styled.div`
   z-index: 100;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   top: 0;
+  background: rgba(250, 247, 247, 0.8);
   @media (max-width: 640px) {
     padding: 10px 0;
   }
@@ -67,7 +70,7 @@ const StyledLinkLogo = styled(Link)`
 const Header = (
   <NavContainer>
     <LogoWrapper>
-      <StyledLinkLogo to={"/"}>Ǡ </StyledLinkLogo>
+      <StyledLinkLogo to={'/'}>Ǡ </StyledLinkLogo>
     </LogoWrapper>
     <StyledLink to="/work">Work</StyledLink>
     <StyledLink to="/about">About</StyledLink>
@@ -85,20 +88,30 @@ const Nav = () => {
       currentPosition > 50 ? setScrolling(true) : setScrolling(false)
     }
 
-    window.addEventListener("scroll", onScroll)
+    window.addEventListener('scroll', onScroll)
 
     return function cleanup() {
-      window.removeEventListener("scroll", onScroll)
+      window.removeEventListener('scroll', onScroll)
     }
   }, [scrolling])
 
   return (
     <>
-      {scrolling ? (
-        <Scrolled>{Header}</Scrolled>
-      ) : (
-        <NotScrolled>{Header}</NotScrolled>
-      )}
+      {/* {scrolling ? ( */}
+      <Scrolled>
+        <NavContainer>
+          <LogoWrapper>
+            <StyledLinkLogo to={'/'}>Ǡ </StyledLinkLogo>
+          </LogoWrapper>
+          <StyledLink to="/work">Work</StyledLink>
+          <StyledLink to="/about">About</StyledLink>
+          <StyledLink to="/blog">Blog</StyledLink>
+          <StyledLink to="/contact">Contact</StyledLink>
+        </NavContainer>
+      </Scrolled>
+
+      {/* // ) : ( // <NotScrolled>{Header}</NotScrolled>
+      // )} */}
     </>
   )
 }
