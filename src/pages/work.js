@@ -58,32 +58,6 @@ export const query = graphql`
                 }
               }
             }
-            otherImage2 {
-              childImageSharp {
-                fluid(
-                  maxWidth: 500
-                  maxHeight: 500
-                  quality: 70
-                  fit: COVER
-                  cropFocus: NORTHEAST
-                ) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
-            otherImage3 {
-              childImageSharp {
-                fluid(
-                  maxWidth: 500
-                  maxHeight: 500
-                  quality: 70
-                  fit: COVER
-                  cropFocus: NORTHWEST
-                ) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
           }
         }
       }

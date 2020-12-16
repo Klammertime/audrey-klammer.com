@@ -38,9 +38,9 @@ const Angle = styled.div`
 
 const Header = styled.h2`
   margin-bottom: 0px;
-  font: normal 700 3.7vw/4.4vw Inter, sans-serif;
+  font-size: 3.7vw;
   @media (max-width: 940px) {
-    font: normal 700 7vw/4.4vw Inter, sans-serif;
+    font-size: 7vw;
   }
 `
 
@@ -75,7 +75,6 @@ const BlogHeading = styled.div`
   display: grid;
   grid: auto-flow 25vw 25vw / 1fr 1.5fr 1.5fr 1fr;
   min-height: 10vw;
-  padding: 20px 0;
 `
 
 const Cover = styled.div`

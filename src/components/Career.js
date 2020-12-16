@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-
 import styled from 'styled-components'
 import Section from '../components/Section'
 import downloadFile from '../data/downloads/Audrey_Klammer_Resume.pdf'
@@ -40,6 +39,7 @@ const Date = styled.div`
   text-align: right;
   justify-self: stretch;
 `
+
 const Timeline = styled.div`
   justify-self: center;
   position: relative;

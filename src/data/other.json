@@ -13,7 +13,7 @@
     "image": "portfolio/portfolio-item-1-1.png",
     "image2": "portfolio/portfolio-item-1-2.png",
     "image3": "portfolio/portfolio-item-1-3.png",
-    "technology": "React, D3.js, JavaScript",
+    "technology": "React, Redux, Webpack, D3.js, JavaScript, ES6+, Mapbox, Leaflet.js, GeoJSON, JSON REST APIs, automated testing and linting, Jest, performance testing, MySQL, Express.js, jQuery (transitioned to React), HTML, CSS, Jira, 3-week sprints, Bootstrap, Git, Gulp, Node.js, APIs, Visual Studio Code, styled-components, eslint, JavaScript style guide",
     "link": "https://developer.verizonmedia.com/audience-insights/docs/started/ui.html",
     "role": "Front-end Engineer",
     "testimonial": {
@@ -35,7 +35,7 @@
     "image": "portfolio/portfolio-item-2-1.jpeg",
     "image2": "portfolio/portfolio-item-2-2.png",
     "image3": "portfolio/portfolio-item-2-3.jpeg",
-    "technology": "Knockoutjs, AJAX, Bootstrap, jQuery, HTML5, Google Maps, Typekit",
+    "technology": "Knockout.js MVVM, AJAX, Bootstrap, jQuery Autocomplete, HTML5, Node.js, Base.js, Gulp, Gulp GitHub Pages, Google Maps JSAPI, Google Street View Image API, SF Open Data API, TMDb API at themoviedb.org, themoviedb JavaScript Library created by Franco Cavestri, The New York Times API - Movie Reviews API, Module export pattern, geocoding, Typekit, Vector graphics, HTML Canvas",
     "link": "http://klammertime.github.io/P5-Neighborhood-Map/",
     "projectText": {
       "text1": "",
@@ -55,7 +55,7 @@
     "image2": "portfolio/portfolio-item-3-1.png",
     "image3": "portfolio/portfolio-item-3-6.png",
     "role": "Developer",
-    "technology": "Object-Oriented JavaScript, HTML5 Canvas, HTML5 Drag & Drop",
+    "technology": "Object-Oriented JavaScript, HTML5 Canvas, HTML5 Drag & Drop, Gulp, Gulp GitHub Pages, Node.js, Google Fonts, OOJS: Pseudoclassical Subclasses, Protypal Inheritance Chains, JavaScript image loading utility, JavaScript game engine, HTML, CSS, JavaScript Style Guide",
     "link": "http://klammertime.github.io/P3-Classic-Arcade-Game-Clone/"
   }
 ]

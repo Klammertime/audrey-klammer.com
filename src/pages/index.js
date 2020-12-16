@@ -9,7 +9,7 @@ import Project from '../components/Project'
 import Section from '../components/Section'
 
 const HomePage = ({ data, location, heading, description }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout location={location} title={siteTitle} description={description} heading={heading}>
@@ -51,33 +51,7 @@ export const query = graphql`
                   maxHeight: 500
                   quality: 70
                   fit: COVER
-                  cropFocus: NORTHWEST
-                ) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
-            otherImage2 {
-              childImageSharp {
-                fluid(
-                  maxWidth: 500
-                  maxHeight: 500
-                  quality: 70
-                  fit: COVER
                   cropFocus: NORTHEAST
-                ) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
-              }
-            }
-            otherImage3 {
-              childImageSharp {
-                fluid(
-                  maxWidth: 500
-                  maxHeight: 500
-                  quality: 70
-                  fit: COVER
-                  cropFocus: NORTHWEST
                 ) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }

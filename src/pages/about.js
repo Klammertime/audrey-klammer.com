@@ -58,9 +58,7 @@ const AboutPage = ({ location, data }) => {
         </AboutTextWrapper>
       </Section>
       <Skills />
-
       <Career />
-
       <Reviews />
     </Layout>
   )

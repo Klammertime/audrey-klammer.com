@@ -31,7 +31,6 @@ const NotScrolled = styled.div`
 `
 const Scrolled = styled(NotScrolled)`
   backdrop-filter: blur(20px);
-  background: rgba(250, 247, 247, 0.8);
 `
 const LogoWrapper = styled.div`
   align-items: center;
@@ -45,8 +44,7 @@ const LogoWrapper = styled.div`
 `
 const StyledLink = styled(Link)`
   color: #151515;
-  font: uppercase 600 13px/20px Inter, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   &:hover {
     color: #151515;
     text-decoration: underline;
@@ -58,6 +56,7 @@ const StyledLink = styled(Link)`
     }
   }
 `
+
 const StyledLinkLogo = styled(Link)`
   color: var(--color-orange);
   font-weight: 700;
@@ -67,17 +66,6 @@ const StyledLinkLogo = styled(Link)`
     }
   }
 `
-const Header = (
-  <NavContainer>
-    <LogoWrapper>
-      <StyledLinkLogo to={'/'}>Ǡ </StyledLinkLogo>
-    </LogoWrapper>
-    <StyledLink to="/work">Work</StyledLink>
-    <StyledLink to="/about">About</StyledLink>
-    <StyledLink to="/blog">Blog</StyledLink>
-    <StyledLink to="/contact">Contact</StyledLink>
-  </NavContainer>
-)
 
 const Nav = () => {
   const [scrolling, setScrolling] = useState(false)
@@ -97,7 +85,6 @@ const Nav = () => {
 
   return (
     <>
-      {/* {scrolling ? ( */}
       <Scrolled>
         <NavContainer>
           <LogoWrapper>
@@ -109,9 +96,6 @@ const Nav = () => {
           <StyledLink to="/contact">Contact</StyledLink>
         </NavContainer>
       </Scrolled>
-
-      {/* // ) : ( // <NotScrolled>{Header}</NotScrolled>
-      // )} */}
     </>
   )
 }

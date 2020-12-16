@@ -9,11 +9,8 @@ import { SocialIcon } from 'react-social-icons'
 const FooterGrid = styled.nav`
   max-width: 100vw;
   margin: 0 auto;
-  font: normal 16px/18px Inter, sans-serif;
   display: grid;
   padding: 3vw;
-  place-items: center 
-  grid-template-rows: auto;
   grid-template-columns: 1fr auto auto;
   grid-auto-columns: 1fr;
   grid-column-gap: 8vw;
@@ -68,7 +65,6 @@ const StyledFooterLinks = styled.div`
 
 const StyledHeader = styled.h3`
   margin: 0 0 12px 0;
-  font: normal 700 24px/32px Inter, sans-serif;
   color: white;
 `
 
