@@ -6,7 +6,7 @@
   </a>
 </p>
 <h1 align="center">
-Former Audrey Klammer Personal Portfolio Site
+Audrey Klammer Personal Portfolio Site V1
 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/af0afc12-62b3-472d-b0a2-5a02ff97ba2a/deploy-status)](https://app.netlify.com/sites/zen-lamport-646916/deploys)
